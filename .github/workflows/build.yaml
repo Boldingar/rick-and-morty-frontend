@@ -52,5 +52,5 @@ jobs:
               }
 
         env:
-          SLACK_BOT_TOKE: ${{secrets.SLACK_BOT_TOKEN}}
+          SLACK_BOT_TOKEN: ${{secrets.SLACK_BOT_TOKEN}}
             
