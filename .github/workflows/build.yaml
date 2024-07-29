@@ -1,4 +1,4 @@
-name: S3Workflows
+name: Rick and Morty Build
 on:
   push:
     branches:
