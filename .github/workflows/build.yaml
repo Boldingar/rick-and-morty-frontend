@@ -1,7 +1,7 @@
 name: S3Workflows
-on: 
+on:
   push:
-    branches: 
+    branches:
       - main
 
 jobs:
@@ -14,7 +14,7 @@ jobs:
 
       - name: Set up Node.js
         uses: actions/setup-node@v2
-        with: 
+        with:
           node-version: 18.x
 
       - name: Install Dependencies
@@ -32,4 +32,4 @@ jobs:
           aws-region: eu-central-1
 
       - name: Upload to S3
-        run: aws s3 sync build s3://mohammad7snen
+        run: aws s3 sync dist s3://mohammad7snen
