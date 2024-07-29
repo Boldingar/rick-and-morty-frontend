@@ -1,12 +1,8 @@
 import React from "react";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
-import { Route, Routes, BrowserRouter } from "react-router-dom";
 import MediaCard from "./card";
 import Navbar from "./Navbar";
-import CharacterDetail from "./character";
-import Home from "./searchAndLogo";
-import FavoritePage from "./Favourite";
 import "../CSS/characters.css";
 
 interface Character {
