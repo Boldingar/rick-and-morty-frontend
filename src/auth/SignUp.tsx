@@ -5,12 +5,12 @@ import {
   Avatar,
   Box,
   Button,
-  Checkbox,
+  // Checkbox,
   Grid,
   TextField,
   Typography,
   Container,
-  FormControlLabel,
+  // FormControlLabel,
   CssBaseline,
 } from "@mui/material";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";

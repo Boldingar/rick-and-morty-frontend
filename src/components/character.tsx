@@ -1,20 +1,19 @@
 // src/components/CharacterDetail.tsx
-import React from "react";
 import { useQuery } from "@tanstack/react-query";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import "../CSS/CharacterDetail.css"; // Import CSS file
 import Navbar from "./Navbar";
 
-interface Character {
-  id: number;
-  name: string;
-  image: string;
-  species: string;
-  status: string;
-  gender: string;
-  origin: { name: string };
-}
+// interface Character {
+//   id: number;
+//   name: string;
+//   image: string;
+//   species: string;
+//   status: string;
+//   gender: string;
+//   origin: { name: string };
+// }
 
 const fetchCharacter = async (id: string) => {
   const response = await axios.get(

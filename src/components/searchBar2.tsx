@@ -1,8 +1,8 @@
 // src/components/SearchBar2.tsx
-import React, { useState } from 'react';
-import axios from 'axios';
-import MediaCard from './card';
-import '../CSS/searchBar2.css';
+import axios from "axios";
+import MediaCard from "./card";
+import "../CSS/searchBar2.css";
+import { useState } from "react";
 
 interface Character {
   id: number;
@@ -12,15 +12,14 @@ interface Character {
 }
 
 export const SearchBar2 = () => {
-  const [searchInput, setSearchInput] = useState('');
+  const [searchInput, setSearchInput] = useState("");
   const [searchResults, setSearchResults] = useState<Character[]>([]);
 
   const handleSearch = () => {
-    if (searchInput.trim() === '') {
+    if (searchInput.trim() === "") {
       setSearchResults([]);
       return;
     }
-
 
     axios
       .get(`https://rickandmortyapi.com/api/character/?name=${searchInput}`)
@@ -28,7 +27,7 @@ export const SearchBar2 = () => {
         setSearchResults(response.data.results);
       })
       .catch((error) => {
-        console.error('Error fetching data:', error);
+        console.error("Error fetching data:", error);
         setSearchResults([]);
       });
   };

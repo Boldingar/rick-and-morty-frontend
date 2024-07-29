@@ -3,22 +3,9 @@ import SearchBar2 from "./searchBar2"; // Adjust path as necessary
 import Button from "./button"; // Adjust path as necessary
 import logo from "../assets/Rick-And-Morty-Logo.svg";
 import "../CSS/searchAndLogo.css";
-import FavoritePage from "./Favourite";
+// import FavoritePage from "./Favourite";
 
 const Home = () => {
-  const handleFavorites = (character: any) => {
-    let favoriteCharacters = JSON.parse(
-      localStorage.getItem("favoriteCharacters") || "[]"
-    );
-    if (!favoriteCharacters.find((c: any) => c.id === character.id)) {
-      favoriteCharacters = [...favoriteCharacters, character];
-      localStorage.setItem(
-        "favoriteCharacters",
-        JSON.stringify(favoriteCharacters)
-      );
-    }
-  };
-
   return (
     <div className="container">
       <div className="logo">
